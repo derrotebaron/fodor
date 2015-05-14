@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- based on GCC 4.9.1 -->
+<flags name="GCC Optimization Parameters">
+  <flag type="gcc-param" name="predictable-branch-outcome" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <!-- XXX compile time -->
+  <flag type="gcc-param" name="max-crossjump-edges" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="min-crossjump-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-grow-copy-bb-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-goto-duplication-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+  <flag type="gcc-param" name="max-delay-slot-insn-search" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-delay-slot-live-search" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <!-- TODO Units? -->
+  <flag type="gcc-param" name="max-gcse-memory" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-gcse-insertion-ratio" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-pending-list-length" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-modulo-backtrack-attempts" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-inline-insns-single" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-inline-insns-auto" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="inline-min-speedup" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <!-- XXX compile time -->
+  <flag type="gcc-param" name="large-function-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="large-function-growth" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="large-unit-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="inline-unit-growth" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ipcp-unit-growth" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="large-stack-frame" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="large-stack-frame-growth" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-inline-insns-recursive-auto" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-inline-insns-recursive" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-inline-recursive-depth-auto" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-inline-recursive-depth" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="min-inline-recursive-probability" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <flag type="gcc-param" name="early-inlining-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-early-inliner-iterations" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="comdat-sharing-probability" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <flag type="gcc-param" name="min-vect-loop-bound" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="gcse-cost-distance-ratio" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="gcse-unrestricted-cost" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <!-- XXX compile time -->
+  <flag type="gcc-param" name="max-hoist-depth" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <!-- XXX compile time -->
+  <flag type="gcc-param" name="max-tail-merge-comparisons" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <!-- XXX compile time -->
+  <flag type="gcc-param" name="max-tail-merge-iterations" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-unrolled-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-average-unrolled-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-unroll-times" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-peeled-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-peel-times" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-peel-branches" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-completely-peeled-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-completely-peel-times" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-completely-peel-loop-nest-depth" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-unswitch-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-unswitch-level" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="lim-expensive" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <!-- XXX compile time -->
+  <flag type="gcc-param" name="iv-consider-all-candidates-bound" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="iv-max-considered-uses" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="iv-always-prune-cand-set-bound" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="scev-max-expr-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="scev-max-expr-complexity" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="omega-max-vars" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="omega-max-geqs" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="omega-max-eqs" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="omega-max-wild-cards" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="omega-hash-table-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="omega-max-keys" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="omega-eliminate-redundant-constraints" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="vect-max-version-for-alignment-checks" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="vect-max-version-for-alias-checks" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <!-- XXX -1 means inf -->
+  <flag type="gcc-param" name="vect-max-peeling-for-alignment" domain-type="Range" >
+    <range from="-1" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-iterations-to-track" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="hot-bb-count-ws-permille" domain-type="Range" >
+    <range from="0" to="1000" />
+  </flag>
+
+  <flag type="gcc-param" name="hot-bb-frequency-fraction" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-predicted-iterations" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="builtin-expect-probability" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <flag type="gcc-param" name="align-threshold" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="align-loop-iterations" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="tracer-dynamic-coverage" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="tracer-max-code-growth" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="tracer-min-branch-ratio" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <flag type="gcc-param" name="tracer-min-branch-ratio" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-cse-path-length" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-cse-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-reload-search-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-cselib-memory-locations" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="reorder-blocks-duplicate" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-sched-ready-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-sched-region-blocks" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-pipeline-region-blocks" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-sched-region-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-pipeline-region-insns" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="min-spec-prob" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <flag type="gcc-param" name="max-sched-extend-regions-iters" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-sched-insn-conflict-delay" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="sched-spec-prob-cutoff" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <flag type="gcc-param" name="sched-spec-state-edge-prob-cutoff" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <flag type="gcc-param" name="sched-mem-true-dep-cost" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="selsched-max-lookahead" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="selsched-max-sched-times" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="selsched-max-insns-to-rename" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="sms-min-sc" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-last-value-rtl" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="integer-share-limit" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ssp-buffer-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="min-size-for-stack-sharing" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-jump-thread-duplication-stmts" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-fields-for-field-sensitive" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="prefetch-latency" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="simultaneous-prefetches" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="l1-cache-line-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="l1-cache-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="l2-cache-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="min-insn-to-prefetch-ratio" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="prefetch-min-insn-to-mem-ratio" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="use-canonical-types" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="switch-conversion-max-branch-ratio" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-partial-antic-length" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="sccvn-max-scc-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="sccvn-max-alias-queries-per-access" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ira-max-loops-num" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ira-max-conflict-table-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ira-loop-reserved-regs" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="loop-invariant-max-bbs-in-loop" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="loop-max-datarefs-for-datadeps" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-vartrack-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="max-vartrack-expr-depth" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="min-nondebug-insn-uid" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ipa-sra-ptr-growth-factor" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="tm-max-aggregate-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="graphite-max-nb-scop-params" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="graphite-max-bbs-per-function" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="loop-block-tile-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ipa-cp-value-list-size" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ipa-cp-eval-threshold" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ipa-max-agg-items" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ipa-cp-loop-hint-bonus" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="ipa-cp-array-index-hint-bonus" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="lto-partitions" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="lto-minpartition" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="sink-frequency-threshold" domain-type="Range" >
+    <range from="0" to="100" />
+  </flag>
+
+  <flag type="gcc-param" name="max-stores-to-sink" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="allow-load-data-races" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="allow-store-data-races" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="allow-packed-load-data-races" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="allow-packed-store-data-races" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="case-values-threshold" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="tree-reassoc-width" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="sched-pressure-algorithm" domain-type="Range" >
+    <range from="1" to="2" />
+  </flag>
+
+  <flag type="gcc-param" name="max-slsr-cand-scan" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-param" name="asan-globals" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="asan-stack" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="asan-instrument-reads" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="asan-instrument-writes" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="asan-memintrin" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+
+  <flag type="gcc-param" name="asan-use-after-return" domain-type="Range" >
+    <range from="0" to="1" />
+  </flag>
+</flags>

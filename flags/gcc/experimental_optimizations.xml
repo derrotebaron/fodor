@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- based on GCC 4.9.1 -->
+<flags name="GCC Experimental Optimizations">
+  <flag type="gcc" name="branch-probabilities" domain-type="boolean_no" group="experimental" />
+
+  <flag type="gcc" name="rename-registers" domain-type="boolean_no" group="experimental" />
+
+  <flag type="gcc" name="peel-loops" domain-type="boolean_no" group="experimental" />
+
+  <flag type="gcc" name="move-loop-invariants" domain-type="boolean_no" group="experimental" />
+
+  <flag type="gcc" name="unswitch-loops" domain-type="boolean_no" group="experimental" />
+
+  <flag type="gcc" name="function-sections" domain-type="boolean_no" group="experimental" />
+  <flag type="gcc" name="data-sections" domain-type="boolean_no" group="experimental" />
+
+  <flag type="gcc" name="branch-target-load-optimize" domain-type="boolean_no" group="experimental" />
+
+  <flag type="gcc" name="branch-target-load-optimize2" domain-type="boolean_no" group="experimental" />
+
+  <flag type="gcc" name="btr-bb-exclusive" domain-type="boolean_no" group="experimental" />
+
+  <flag type="gcc" name="stack-protector" domain-type="boolean_no" group="experimental stack-protector" />
+
+  <flag type="gcc" name="stack-protector-all" domain-type="boolean_no" group="experimental stack-protector" />
+
+  <flag type="gcc" name="stack-protector-strong" domain-type="boolean_no" group="experimental stack-protector" />
+
+  <flag type="gcc" name="section-anchors" domain-type="boolean_no" group="experimental" />
+</flags>

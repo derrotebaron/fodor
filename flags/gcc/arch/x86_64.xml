@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- based on GCC 4.9.1 -->
+<flags name="GCC x86_64 Optimizations">
+  <flag type="gcc-machine" name="no-red-zone" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="cmodel" domain-type="list" >
+    <list-element value="small"/>
+    <list-element value="kernel"/>
+    <list-element value="medium"/>
+    <list-element value="large"/>
+  </flag>
+
+  <!-- XXX short only x32 compatible
+    <flag type="gcc-machine" name="address-mode" domain-type="list" >
+      <list-element value="long"/>
+      <list-element value="short"/>
+    </flag>
+   -->
+</flags>

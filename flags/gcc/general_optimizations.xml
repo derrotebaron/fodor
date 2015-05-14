@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- based on GCC 4.9.1 -->
+<flags name="GCC General Optimizations">
+  <flag type="gcc" name="defer-pop" domain-type="boolean_no" />
+
+  <flag type="gcc" name="forward-propagate" domain-type="boolean_no" />
+
+  <flag type="gcc" name="omit-frame-pointer" domain-type="boolean_no" />
+
+  <flag type="gcc" name="optimize-sibling-calls" domain-type="boolean_no" />
+
+  <flag type="gcc" name="inline" domain-type="boolean_no" />
+
+  <flag type="gcc" name="inline-small-functions" domain-type="boolean_no" />
+
+  <flag type="gcc" name="indirect-inlining" domain-type="boolean_no" />
+
+  <flag type="gcc" name="inline-functions" domain-type="boolean_no" />
+
+  <flag type="gcc" name="inline-functions-called-once" domain-type="boolean_no" />
+
+  <flag type="gcc" name="early-inlining" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ipa-sra" domain-type="boolean_no" />
+
+  <!-- XXX inline-limit=n ommited, because of more specific param settings 
+       max-inline-insns-single and max-inline-insns-auto -->
+  
+  <!-- FIXME -fkeep-inline-functions includes -fno-keep-inline-dllexport -->
+  <!-- XXX c++: error: command line option ‘-fno-keep-inline-dllexport’ is not supported by this configuration -->
+  <flag type="gcc" name="keep-inline-dllexport" domain-type="boolean_no" />
+
+  <flag type="gcc" name="keep-inline-functions" domain-type="boolean_no" />
+
+  <flag type="gcc" name="keep-static-consts" domain-type="boolean_no" />
+
+  <flag type="gcc" name="merge-constants" domain-type="boolean_no" />
+
+  <!-- XXX -fmerge-all-constants implies -fmerge-constants -->
+  <!-- XXX NON-CONFORMANT BEHAVIOR -->
+  <flag type="gcc" name="merge-all-constants" domain-type="boolean_no" group="unsafe" />
+
+  <flag type="gcc" name="modulo-sched" domain-type="boolean_no" />
+
+  <!-- XXX only effective with -fmodulo-sched -->
+  <flag type="gcc" name="modulo-sched-allow-regmoves" domain-type="boolean_no" />
+
+  <flag type="gcc" name="branch-count-reg" domain-type="boolean_no" />
+
+  <flag type="gcc" name="function-cse" domain-type="boolean_no" />
+
+  <flag type="gcc" name="zero-initialized-in-bss" domain-type="boolean_no" />
+
+  <flag type="gcc" name="thread-jumps" domain-type="boolean_no" />
+
+  <flag type="gcc" name="split-wide-types" domain-type="boolean_no" />
+
+  <flag type="gcc" name="cse-follow-jumps" domain-type="boolean_no" />
+
+  <flag type="gcc" name="cse-skip-blocks" domain-type="boolean_no" />
+
+  <flag type="gcc" name="rerun-cse-after-loop" domain-type="boolean_no" />
+
+  <flag type="gcc" name="gcse" domain-type="boolean_no" />
+
+  <flag type="gcc" name="gcse-lm" domain-type="boolean_no" />
+
+  <flag type="gcc" name="gcse-sm" domain-type="boolean_no" />
+
+  <flag type="gcc" name="gcse-las" domain-type="boolean_no" />
+
+  <flag type="gcc" name="gcse-after-reload" domain-type="boolean_no" />
+
+  <flag type="gcc" name="aggressive-loop-optimizations" domain-type="boolean_no" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="unsafe-loop-optimizations" domain-type="boolean_no" group="unsafe" />
+
+  <flag type="gcc" name="crossjumping" domain-type="boolean_no" />
+
+  <flag type="gcc" name="auto-inc-dec" domain-type="boolean_no" />
+
+  <flag type="gcc" name="dce" domain-type="boolean_no" />
+
+  <flag type="gcc" name="dse" domain-type="boolean_no" />
+
+  <flag type="gcc" name="if-conversion" domain-type="boolean_no" />
+
+  <flag type="gcc" name="if-conversion2" domain-type="boolean_no" />
+
+  <flag type="gcc" name="declone-ctor-dtor" domain-type="boolean_no" />
+
+  <!-- XXX is this valid in the c/c++-spec? -->
+  <flag type="gcc" name="delete-null-pointer-checks" domain-type="boolean_no" group="unsafe" />
+
+  <flag type="gcc" name="devirtualize" domain-type="boolean_no" />
+
+  <flag type="gcc" name="devirtualize-speculatively" domain-type="boolean_no" />
+
+  <flag type="gcc" name="expensive-optimizations" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ree" domain-type="boolean_no" />
+
+  <flag type="gcc" name="live-range-shrinkage" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ira-algorithm" domain-type="list" >
+    <list-element value="priority"/>
+    <list-element value="CB"/>
+  </flag>
+
+  <flag type="gcc" name="ira-region" domain-type="list" >
+    <list-element value="all"/>
+    <list-element value="mixed"/>
+    <list-element value="one"/>
+  </flag>
+
+  <flag type="gcc" name="ira-hoist-pressure" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ira-loop-pressure" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ira-share-save-slots" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ira-share-spill-slots" domain-type="boolean_no" />
+
+  <flag type="gcc" name="delayed-branch" domain-type="boolean_no" />
+
+  <flag type="gcc" name="schedule-insns" domain-type="boolean_no" />
+
+  <flag type="gcc" name="schedule-insns2" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-interblock" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-spec" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-pressure" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-spec-load" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-spec-load-dangerous" domain-type="boolean_no" />
+
+  <!-- TODO determine useful bounds -->
+  <!-- TODO 0 means inf -->
+  <!-- TODO can be -fno-sched-stalled-insns -->
+  <flag type="gcc" name="sched-stalled-insns" domain-type="Range" >
+    <range from="0" to="9999" />
+  </flag>
+
+  <!-- TODO determine useful bounds -->
+  <flag type="gcc" name="sched-stalled-insns-dep" domain-type="Range" >
+    <range from="0" to="9999" />
+  </flag>
+
+  <flag type="gcc" name="sched2-use-superblocks" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-group-heuristic" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-critical-path-heuristic" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-spec-insn-heuristic" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-rank-heuristic" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-last-insn-heuristic" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sched-dep-count-heuristic" domain-type="boolean_no" />
+
+  <flag type="gcc" name="reschedule-modulo-scheduled-loops" domain-type="boolean_no" />
+
+  <flag type="gcc" name="selective-scheduling" domain-type="boolean_no" />
+
+  <flag type="gcc" name="selective-scheduling2" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sel-sched-pipelining" domain-type="boolean_no" />
+
+  <flag type="gcc" name="sel-sched-pipelining-outer-loops" domain-type="boolean_no" />
+
+  <flag type="gcc" name="shrink-wrap" domain-type="boolean_no" />
+
+  <flag type="gcc" name="caller-saves" domain-type="boolean_no" />
+
+  <flag type="gcc" name="combine-stack-adjustments" domain-type="boolean_no" />
+
+  <!-- XXX -fconserve-stack will be handled by params large-stack-frame and
+       stack-frame-growth -->
+
+  <flag type="gcc" name="tree-reassoc" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-pre" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-partial-pre" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-forwprop" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-fre" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-phiprop" domain-type="boolean_no" />
+
+  <flag type="gcc" name="hoist-adjacent-loads" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-copy-prop" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ipa-pure-const" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ipa-reference" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ipa-pta" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ipa-profile" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ipa-cp" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ipa-cp-clone" domain-type="boolean_no" />
+
+  <flag type="gcc" name="isolate-erroneous-paths-dereference" domain-type="boolean_no" />
+
+  <flag type="gcc" name="isolate-erroneous-paths-attribute" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-sink" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-bit-ccp" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-ccp" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-switch-conversion" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-tail-merge" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-dce" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-builtin-call-dce" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-dominator-opts" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-dse" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-ch" domain-type="boolean_no" group="graphite" />
+
+  <flag type="gcc" name="tree-loop-optimize" domain-type="boolean_no" group="graphite" />
+
+  <flag type="gcc" name="tree-loop-linear" domain-type="boolean_no" group="graphite" />
+
+  <flag type="gcc" name="loop-interchange" domain-type="boolean_no" group="graphite" />
+
+  <flag type="gcc" name="loop-strip-mine" domain-type="boolean_no" group="graphite" />
+
+  <flag type="gcc" name="loop-block" domain-type="boolean_no" group="graphite" />
+
+  <flag type="gcc" name="graphite-identity" domain-type="boolean_no" group="graphite" />
+
+  <flag type="gcc" name="loop-nest-optimize" domain-type="boolean_no" />
+
+  <flag type="gcc" name="loop-parallelize-all" domain-type="boolean_no" group="graphite" />
+
+  <flag type="gcc" name="check-data-deps" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-loop-if-convert" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-loop-if-convert-stores" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-loop-distribution" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-loop-distribute-patterns" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-loop-im" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-loop-ivcanon" domain-type="boolean_no" />
+
+  <flag type="gcc" name="ivopts" domain-type="boolean_no" />
+
+  <!-- TODO determine useful bounds -->
+  <!-- XXX is this useful for libgeodecomp -->
+  <!-- FIXME graphite? -->
+  <flag type="gcc" name="tree-parallelize-loops" domain-type="Range" group="parallel graphite" >
+    <range from="0" to="9999" />
+  </flag>
+
+  <flag type="gcc" name="tree-pta" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-sra" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-copyrename" domain-type="boolean_no" />
+
+  <!-- XXX unrecognized ?
+  <flag type="gcc" name="tree-coalesce-inlined-vars" domain-type="boolean_no" />
+   -->
+
+  <flag type="gcc" name="tree-coalesce-vars" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-ter" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tree-slsr" domain-type="boolean_no" />
+
+  <!-- FIXME graphite? -->
+  <flag type="gcc" name="tree-vectorize" domain-type="boolean_no" group="graphite bug" />
+
+  <!-- FIXME graphite? -->
+  <flag type="gcc" name="tree-loop-vectorize" domain-type="boolean_no" group="graphite bug" />
+
+  <!-- FIXME graphite? -->
+  <flag type="gcc" name="tree-slp-vectorize" domain-type="boolean_no" group="graphite" />
+
+  <flag type="gcc" name="vect-cost-model" domain-type="list" >
+    <list-element value="unlimited"/>
+    <list-element value="dynamic"/>
+    <list-element value="cheap"/>
+  </flag>
+
+  <flag type="gcc" name="simd-cost-model" domain-type="list" >
+    <list-element value="unlimited"/>
+    <list-element value="dynamic"/>
+    <list-element value="cheap"/>
+  </flag>
+
+  <flag type="gcc" name="tree-vrp" domain-type="boolean_no" />
+
+  <flag type="gcc" name="tracer" domain-type="boolean_no" />
+
+  <flag type="gcc" name="unroll-loops" domain-type="boolean_no" />
+
+  <!-- TODO fix typo in gcc-manpage :-) -->
+  <flag type="gcc" name="unroll-all-loops" domain-type="boolean_no" />
+
+  <flag type="gcc" name="split-ivs-in-unroller" domain-type="boolean_no" />
+
+  <flag type="gcc" name="variable-expansion-in-unroller" domain-type="boolean_no" />
+
+  <flag type="gcc" name="partial-inlining" domain-type="boolean_no" />
+
+  <flag type="gcc" name="predictive-commoning" domain-type="boolean_no" group="bug" />
+
+  <flag type="gcc" name="prefetch-loop-arrays" domain-type="boolean_no" group="bug" />
+
+  <flag type="gcc" name="peephole" domain-type="boolean_no" />
+  <flag type="gcc" name="peephole2" domain-type="boolean_no" />
+
+  <flag type="gcc" name="guess-branch-probability" domain-type="boolean_no" />
+
+  <flag type="gcc" name="reorder-blocks" domain-type="boolean_no" />
+
+  <flag type="gcc" name="reorder-blocks-and-partition" domain-type="boolean_no" />
+
+  <flag type="gcc" name="reorder-functions" domain-type="boolean_no" />
+
+  <flag type="gcc" name="strict-aliasing" domain-type="boolean_no" />
+
+  <flag type="gcc" name="strict-overflow" domain-type="boolean_no" />
+
+  <!-- TODO determine useful bounds -->
+  <!-- TODO 0 means machine-dependent default -->
+  <flag type="gcc" name="align-functions" domain-type="Range" >
+    <range from="0" to="9999" />
+  </flag>
+
+  <!-- TODO determine useful bounds -->
+  <!-- TODO 0 means machine-dependent default -->
+  <flag type="gcc" name="align-labels" domain-type="Range" >
+    <range from="0" to="9999" />
+  </flag>
+
+  <!-- TODO determine useful bounds -->
+  <!-- TODO 0 means machine-dependent default -->
+  <flag type="gcc" name="align-loops" domain-type="Range" >
+    <range from="0" to="9999" />
+  </flag>
+
+  <flag type="gcc" name="toplevel-reorder" domain-type="boolean_no" />
+
+  <flag type="gcc" name="web" domain-type="boolean_no" />
+
+  <!-- XXX -fwhole-program seems dangerous -->
+
+  <flag type="gcc" name="lto" domain-type="boolean_no" />
+
+  <flag type="gcc" name="lto-partition" domain-type="list" >
+    <list-element value="1to1"/>
+    <list-element value="balanced"/>
+    <list-element value="max"/>
+  </flag>
+
+  <flag type="gcc" name="lto-compression-level" domain-type="Range" >
+    <range from="0" to="9" />
+  </flag>
+
+  <flag type="gcc" name="use-linker-plugin" domain-type="boolean_no" />
+
+  <flag type="gcc" name="fat-lto-objects" domain-type="boolean_no" />
+
+  <flag type="gcc" name="compare-elim" domain-type="boolean_no" />
+
+  <!-- FIXME -fuse-ld=bfd and -fuse-ld=gold can be used together, but there
+       is no way the specify the default gcc-linker -->
+
+  <flag type="gcc" name="cprop-registers" domain-type="boolean_no" />
+  <!-- FIXME wtf is -fmemory-model -->
+</flags>

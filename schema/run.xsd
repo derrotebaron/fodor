@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="optimize-task">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="algorithm" type="xs:string" />
+				<xs:element name="algorithm-values">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="(([_a-zA-Z-]+=[._0-9a-zA-Z-]+)(,([_a-zA-Z-]+=[._0-9a-zA-Z-]+))*)?" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="termination-criterion">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:integer">
+								<xs:attribute name="type" type="xs:string" use="required" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="flag-set"  type="xs:string" />
+				<xs:element name="exclude-flag-group" minOccurs="0" maxOccurs="unbounded" type="xs:string" />
+				<xs:element name="standard-flags" type="xs:string" />
+				<xs:element name="host-group-compile" type="xs:string" />
+				<xs:element name="host-group-eval" type="xs:string" />
+				<xs:element name="folder-compile" type="xs:string" />
+				<xs:element name="folder-eval" type="xs:string" />
+				<xs:element name="storage" type="xs:string" />
+				<xs:element name="evaluator" type="xs:string" />
+				<xs:element name="versions">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="version" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="of" type="xs:string" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

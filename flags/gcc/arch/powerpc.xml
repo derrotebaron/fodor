@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- based on GCC 4.9.1 -->
+<flags name="GCC PowerPC Optimizations">
+  <!-- XXX -mpowerpc-gpopt -mpowerpc-gfxopt -mpowerpc64 -mmfcrf -mpopcntb -mpopcntd -mfprnd -mcmpb -mmfpgpr -mhard-dfp should all be architecture dependent -->
+
+  <flag type="gcc-machine" name="tune" domain-type="list" >
+    <list-element value="401"/>
+    <list-element value="403"/>
+    <list-element value="405"/>
+    <list-element value="405fp"/>
+    <list-element value="440"/>
+    <list-element value="440fp"/>
+    <list-element value="464"/>
+    <list-element value="464fp"/>
+    <list-element value="476"/>
+    <list-element value="476fp"/>
+    <list-element value="505"/>
+    <list-element value="601"/>
+    <list-element value="602"/>
+    <list-element value="603"/>
+    <list-element value="603e"/>
+    <list-element value="604"/>
+    <list-element value="604e"/>
+    <list-element value="620"/>
+    <list-element value="630"/>
+    <list-element value="740"/>
+    <list-element value="7400"/>
+    <list-element value="7450"/>
+    <list-element value="750"/>
+    <list-element value="801"/>
+    <list-element value="821"/>
+    <list-element value="823"/>
+    <list-element value="860"/>
+    <list-element value="970"/>
+    <list-element value="8540"/>
+    <list-element value="a2"/>
+    <list-element value="e300c2"/>
+    <list-element value="e300c3"/>
+    <list-element value="e500mc"/>
+    <list-element value="e500mc64"/>
+    <list-element value="e5500"/>
+    <list-element value="e6500"/>
+    <list-element value="ec603e"/>
+    <list-element value="G3"/>
+    <list-element value="G4"/>
+    <list-element value="G5"/>
+    <list-element value="titan"/>
+    <list-element value="power3"/>
+    <list-element value="power4"/>
+    <list-element value="power5"/>
+    <list-element value="power5+"/>
+    <list-element value="power6"/>
+    <list-element value="power6x"/>
+    <list-element value="power7"/>
+    <list-element value="power8"/>
+    <list-element value="powerpc"/>
+    <list-element value="powerpc64"/>
+    <list-element value="rs64"/>
+  </flag>
+
+  <flag type="gcc-machine" name="cmodel" domain-type="list" >
+    <list-element value="small"/>
+    <list-element value="medium"/>
+    <list-element value="large"/>
+  </flag>
+
+  <!-- FIXME has no-altivec altivec=be and altivec=le
+  <flag type="gcc-machine" name="altivec" domain-type="" />
+   -->
+
+  <flag type="gcc-machine" name="vrsave" domain-type="boolean_no" />
+
+  <!-- XXX  only use those, when cell is available
+  <flag type="gcc-machine" name="gen-cell-microcode" domain-type="boolean_no" />
+   -->
+
+  <flag type="gcc-machine" name="secure-plt" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="bss-plt" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="isel" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="spe" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="paired" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="vsx" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="crypto" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="direct-move" domain-type="boolean_no" />
+
+  <!-- FIXME typo -->
+  <flag type="gcc-machine" name="power8-fusion" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="power8-vector" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="quad-memory" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="quad-memory-atomic" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="float-gprs" domain-type="list" >
+    <list-element value="single"/>
+    <list-element value="double"/>
+    <list-element value="no"/>
+  </flag>
+
+  <!-- FIXME can't model -mfull-toc, -mno-fp-in-toc, -mno-sum-in-toc, -mminimal-toc -->
+
+  <!-- FIXME can't model -malign-natural, -malign-power -->
+
+  <!-- FIXME can't model -msoft-float, -mhard-float -->
+
+  <!-- FIXME can't model -msingle-float, -mdouble-float -->
+  <flag type="gcc-machine" name="simple-fpu" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="fpu" domain-type="list" >
+    <list-element value="sp_lite"/>
+    <list-element value="dp_lite"/>
+    <list-element value="dp_full"/>
+  </flag>
+
+  <flag type="gcc-machine" name="xilinx-fpu" domain-type="boolean_no" />
+
+  <!-- XXX problems incoming -->
+  <flag type="gcc-machine" name="multiple" domain-type="boolean_no" />
+
+  <!-- XXX problems incoming -->
+  <flag type="gcc-machine" name="string" domain-type="boolean_no" />
+
+  <!-- XXX problems incoming -->
+  <flag type="gcc-machine" name="update" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="avoid-indexed-addresses" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="fused-madd" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="mulhw" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="dlmzb" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="bit-align" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="strict-align" domain-type="boolean_no" />
+
+  <!-- XXX problems incoming -->
+  <flag type="gcc-machine" name="relocatable" domain-type="boolean_no" />
+
+  <!-- XXX problems incoming -->
+  <flag type="gcc-machine" name="relocatable-lib" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="toc" domain-type="boolean_no" />
+
+  <!-- FIXME can't model -mlittle, -mbig -->
+
+  <flag type="gcc-machine" name="single-pic-base" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="prioritize-restricted-insns" domain-type="list" >
+    <list-element value="0"/>
+    <list-element value="1"/>
+    <list-element value="2"/>
+  </flag>
+
+  <!-- FIXME can't model -msched-costly-dep -->
+  <!-- FIXME can't model -minsert-sched-nops -->
+
+  <!-- FIXME can't model -mcall-* -->
+
+  <!-- XXX linking problems incoming -->
+  <flag type="gcc-machine" name="aix-struct-return" domain-type="boolean_no" />
+
+  <!-- XXX linking problems incoming -->
+  <flag type="gcc-machine" name="svr4-struct-return" domain-type="boolean_no" />
+
+  <!-- XXX linking problems incoming -->
+  <flag type="gcc-machine" name="abi" domain-type="list" >
+    <list-element value="spe"/>
+    <list-element value="no-spe"/>
+  </flag>
+
+  <flag type="gcc-machine" name="prototype" domain-type="boolean_no" />
+
+  <!-- XXX linking problems incoming -->
+  <flag type="gcc-machine" name="eabi" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="sdata" domain-type="list" >
+    <list-element value="eabi"/>
+    <list-element value="sysv"/>
+    <list-element value="default"/>
+    <list-element value="none"/>
+  </flag>
+
+
+  <!-- FIXME 32 /64 minimum value -->
+  <flag type="gcc-machine" name="block-move-inline-limit" domain-type="Range" >
+    <range from="32" to="INTMAX" />
+  </flag>
+
+  <!-- FIXME can't model -G -->
+
+  <flag type="gcc-machine" name="regnames" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="longcall" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="tls-markers" domain-type="boolean_no" />
+
+  <!-- FIXME can't model -mrecip -->
+
+  <!-- XXX Float IEEE non comformant-->
+  <flag type="gcc-machine" name="recip-precision" domain-type="boolean_no" />
+
+  <!-- XXX alters behaviour -->
+  <flag type="gcc-machine" name="friz" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="pointers-to-nested-functions" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="save-toc-indirect" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="compat-align-parm" domain-type="boolean_no" />
+</flags>

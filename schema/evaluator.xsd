@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="var">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="hash" />
+			<xs:enumeration value="flags" />
+			<xs:enumeration value="standard-flags" />
+			<xs:enumeration value="storage" />
+			<xs:enumeration value="storage-path" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="vars">
+		<xs:list itemType="var" />
+	</xs:simpleType>
+
+	<xs:complexType name="shell">
+		<xs:sequence>
+			<xs:element name="shell" type="xs:string" />
+			<xs:element name="vars" type="vars" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="evaluator">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="compile-cmdline" type="shell" />
+				<xs:element name="upload-cmdline" type="shell" />
+				<xs:element name="download-cmdline" type="shell" />
+				<xs:element name="run-cmdline" type="shell" />
+				<xs:element name="compile-output-parser" type="xs:string" minOccurs="0" />
+				<xs:element name="eval-output-parser" type="xs:string" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

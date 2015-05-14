@@ -1,0 +1,40 @@
+<evaluator>
+	<compile-cmdline>
+		<shell><![CDATA[
+			mkdir -p %s ; cd %s && cp -r /proj/ciptmp/ne32jilo/libgeodecomp/libgeodecomp-0.3.1-patched/ . && cd libgeodecomp-0.3.1-patched && cd src && ./compile.sh "%s %s" && rm **/*.{cpp,h,cmake,txt,pc}
+		]]></shell>
+		<vars>hash hash flags standard-flags</vars>
+	</compile-cmdline>
+	<upload-cmdline>
+		<shell><![CDATA[
+			rsync -a .. %s/%s && sleep 5
+		]]></shell>
+		<vars>storage hash</vars>
+	</upload-cmdline>
+	<download-cmdline>
+		<shell><![CDATA[
+			cp -r %s/%s/* .
+		]]></shell>
+		<vars>storage-path hash</vars>
+	</download-cmdline>
+	<run-cmdline>
+		<shell><![CDATA[
+			cd src/; 
+			if [[ -a testbed/performancetests/performancetests ]] ; then
+				LD_LIBRARY_PATH=. testbed/performancetests/performancetests 1234 0;
+			else
+				echo "#rev              ; date                 ; host            ; device                                          ; order   ; family                          ; species ; dimensions              ; perf        ; unit
+			1234              ; 2015-Apr-28 14:17:11 ; whistler03      ; Dual-Core AMD Opteron(tm) Processor 2216 HE    ; CPU     ; Jacobi3D                        ; platinum; (1026, 1026, 32)        ; 0.0000000001 ; GLUPS   ";
+			fi
+		]]></shell>
+		<vars></vars>
+	</run-cmdline>
+	<eval-output-parser><![CDATA[
+      lambda do |string|
+        perfs = string.split(?\n).map { |x| x.split ?; }.drop(1).map do |fields|
+          %w{rev date host device order family species dimensions perf unit}.map(&:to_sym).zip (fields)
+        end.map { |x| Hash[x] }.map { |x| x[:perf].to_f }
+		1.0 / perfs.reduce(&:+) # This yields seconds per lattice update
+      end
+	]]></eval-output-parser>
+</evaluator>

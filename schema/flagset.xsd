@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="flags">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="flag" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice>
+								<xs:element name="list-element" minOccurs="1" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:attribute name="value" use="required" />
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="range" minOccurs="0" maxOccurs="1">
+									<xs:complexType>
+										<xs:attribute name="from" use="required" />
+										<xs:attribute name="to" use="required" />
+									</xs:complexType>
+								</xs:element>
+							</xs:choice>
+						</xs:sequence>
+						<xs:attribute name="type" use="required">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="gcc" />
+									<xs:enumeration value="gcc-machine" />
+									<xs:enumeration value="gcc-param" />
+									<xs:enumeration value="gcc-define" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="name" type="xs:string" use="required" />
+						<xs:attribute name="group" use="optional">
+							<xs:simpleType>
+								<xs:list itemType="xs:string"/>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="domain-type">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="boolean" />
+									<xs:enumeration value="boolean_no" />
+									<xs:enumeration value="list" />
+									<xs:enumeration value="Range" />
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

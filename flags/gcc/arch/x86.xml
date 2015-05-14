@@ -1,0 +1,286 @@
+<flags name="GCC x86 Optimizations">
+  <!-- XXX -march should be a user decision -->
+
+  <flag type="gcc-machine" name="tune" domain-type="list" >
+    <list-element value="generic"/>
+    <list-element value="intel"/>
+    <list-element value="i386"/>
+    <list-element value="i486"/>
+    <list-element value="pentium"/>
+    <list-element value="pentium-mmx"/>
+    <list-element value="pentiumpro"/>
+    <list-element value="i686"/>
+    <list-element value="pentium2"/>
+    <list-element value="pentium3"/>
+    <list-element value="pentium-m"/>
+    <list-element value="pentium4"/>
+    <list-element value="prescott"/>
+    <list-element value="nocona"/>
+    <list-element value="core2"/>
+    <list-element value="nehalem"/>
+    <list-element value="westmere"/>
+    <list-element value="sandybridge"/>
+    <list-element value="ivybridge"/>
+    <list-element value="haswell"/>
+    <list-element value="broadwell"/>
+    <list-element value="bonnell"/>
+    <list-element value="silvermont"/>
+    <list-element value="k6"/>
+    <list-element value="k6-2"/>
+    <list-element value="athlon"/>
+    <list-element value="athlon-xp"/>
+    <list-element value="k8"/>
+    <list-element value="k8-sse3"/>
+    <list-element value="amdfam10"/>
+    <list-element value="bdver1"/>
+    <list-element value="bdver2"/>
+    <list-element value="bdver3"/>
+    <list-element value="bdver4"/>
+    <list-element value="btver1"/>
+    <list-element value="btver2"/>
+    <list-element value="winchip-c6"/>
+    <list-element value="winchip2"/>
+    <list-element value="c3"/>
+    <list-element value="c3-2"/>
+    <list-element value="geode"/>
+  </flag>
+
+  <flag type="gcc-machine" name="fpmath" domain-type="list" >
+    <list-element value="387"/>
+    <list-element value="sse"/>
+    <list-element value="both"/>
+  </flag>
+
+  <!-- FIXME is this still valid -->
+  <flag type="gcc-machine" name="ieee-fp" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="soft-float" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="no-fp-ret-in-387" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="no-fancy-math-387" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="align-double" domain-type="boolean_no" />
+
+   <!-- FIXME can't model 96bit-long-double and 128bit-long-double
+        as well as long-double-64, long-double-80 and long-double-128.
+
+        XXX Might alter behavior. -->
+
+  <flag type="gcc-machine" name="large-data-threshold" domain-type="Range">
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <!-- XXX linking problems -->
+  <flag type="gcc-machine" name="rtd" domain-type="boolean_no" />
+
+  <!-- XXX linking problems -->
+  <flag type="gcc-machine" name="regparm" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <!-- XXX linking problems -->
+  <flag type="gcc-machine" name="sseregparm" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="vect8-ret-in-mem" domain-type="boolean_no" />
+
+   <!-- FIXME can't model pc32 pc64 and pc80
+
+        XXX Might alter behavior. -->
+
+  <flag type="gcc-machine" name="stackrealign" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="preferred-stack-boundary" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-machine" name="incoming-stack-boundary" domain-type="Range" >
+    <range from="0" to="INTMAX" />
+  </flag>
+
+  <flag type="gcc-machine" name="mmx" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="sse" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="sse2" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="sse3" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="ssse3" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="sse4.1" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="sse4.2" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="sse4" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="avx" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="avx2" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="avx512f" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="avx512pf" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="avx512er" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="avx512cd" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="sha" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="aes" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="pclmul" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="fsgsbase" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="rdrnd" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="fma" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="prefetchwt1" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="sse4a" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="xop" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="lwp" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="3dnow" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="popcnt" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="abm" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="bmi" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="bmi2" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="lzcnt" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="fxsr" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="mxsave" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="mxsaveopt" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="rtm" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="tbm" domain-type="boolean_no" />
+  <!-- FIXME -mtune-ctrl currently not supported
+
+         list of features
+
+         schedule : on
+         partial_reg_dependency : on
+         sse_partial_reg_dependency : on
+         sse_split_regs : off
+         partial_flag_reg_stall : on
+         movx : on
+         memory_mismatch_stall : on
+         fuse_cmp_and_branch_32 : off
+         fuse_cmp_and_branch_64 : off
+         fuse_cmp_and_branch_soflags : off
+         fuse_alu_and_branch : off
+         reassoc_int_to_parallel : off
+         reassoc_fp_to_parallel : on
+         accumulate_outgoing_args : off
+         prologue_using_move : off
+         epilogue_using_move : off
+         use_leave : on
+         push_memory : on
+         single_push : off
+         double_push : off
+         single_pop : off
+         double_pop : off
+         pad_short_function : off
+         pad_returns : on
+         four_jump_limit : off
+         software_prefetching_beneficial : off
+         lcp_stall : on
+         read_modify : on
+         use_incdec : off
+         integer_dfmode_moves : off
+         opt_agu : off
+         avoid_lea_for_addr : off
+         slow_imul_imm32_mem : off
+         slow_imul_imm8 : off
+         avoid_mem_opnd_for_cmove : off
+         single_stringop : off
+         misaligned_move_string_pro_epilogues : on
+         use_sahf : on
+         use_cltd : on
+         use_bt : on
+         use_himode_fiop : off
+         use_simode_fiop : off
+         use_ffreep : off
+         ext_80387_constants : on
+         vectorize_double : on
+         general_regs_sse_spill : off
+         sse_unaligned_load_optimal : on
+         sse_unaligned_store_optimal : on
+         sse_packed_single_insn_optimal : off
+         sse_typeless_stores : on
+         sse_load0_by_pxor : on
+         inter_unit_moves_to_vec : off
+         inter_unit_moves_from_vec : on
+         inter_unit_conversions : on
+         split_mem_opnd_for_fp_converts : off
+         use_vector_fp_converts : off
+         use_vector_converts : off
+         256_unaligned_load_optimal : off
+         256_unaligned_store_optimal : off
+         avx128_optimal : off
+         double_with_add : on
+         always_fancy_math_387 : on
+         unroll_strlen : on
+         shift1 : on
+         zero_extend_with_and : off
+         promote_himode_imul : on
+         fast_prefix : on
+         read_modify_write : on
+         move_m1_via_or : off
+         not_unpairable : off
+         partial_reg_stall : off
+         promote_qimode : on
+         promote_hi_regs : off
+         himode_math : on
+         split_long_moves : off
+         use_xchgb : off
+         use_mov0 : off
+         not_vectormode : off
+         avoid_vector_decode : off
+         branch_prediction_hints : off
+         qimode_math : on
+         promote_qi_regs : off
+         adjust_unroll_factor : off
+   -->
+
+  <flag type="gcc-machine" name="cld" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="vzeroupper" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="prefer-avx128" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="cx16" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="sahf" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="movbe" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="crc32" domain-type="boolean_no" />
+
+  <!-- XXX comma-seperated + none + default not yet supported
+  <flag type="gcc-machine" name="recip" domain-type="boolean_no" />
+   -->
+
+  <!-- XXX possible linking problems -->
+  <flag type="gcc-machine" name="veclibabi" domain-type="list" >
+    <list-element value="svml"/>
+    <list-element value="acml"/>
+  </flag>
+
+  <flag type="gcc-machine" name="tls-dialect" domain-type="list" >
+    <list-element value="gnu"/>
+    <list-element value="gnu2"/>
+  </flag>
+
+  <flag type="gcc-machine" name="push-args" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="accumulate-outgoing-args" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="no-align-stringops" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="inline-all-stringops" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="inline-stringops-dynamically" domain-type="boolean_no" />
+
+
+  <!-- XXX leaving stringop-strategy out, lets gcc decide on a per case basis
+  <flag type="gcc-machine" name="stringop-strategy" domain-type="list" >
+   -->
+
+  <!-- XXX -mmemcpy-strategy -mmemset-strategy not yet supported -->
+
+  <flag type="gcc-machine" name="omit-leaf-frame-pointer" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="sse2avx" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="fentry" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="8bit-idiv" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="avx256-split-unaligned-load" domain-type="boolean_no" />
+  <flag type="gcc-machine" name="avx256-split-unaligned-store" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="stack-protector-guard" domain-type="list" >
+    <list-element value="global"/>
+    <list-element value="tls"/>
+  </flag>
+</flags>

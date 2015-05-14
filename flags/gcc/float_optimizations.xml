@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- based on GCC 4.9.1 -->
+<flags name="GCC Float Optimizations">
+  <flag type="gcc" name="fp-contract" domain-type="list">
+    <list-element value="off"/>
+    <list-element value="fast"/>
+    <list-element value="on"/>
+  </flag>
+
+  <flag type="gcc" name="float-store" domain-type="boolean_no" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="excess-precision" domain-type="list" group="unsafe" >
+    <list-element value="fast"/>
+    <list-element value="standard"/>
+  </flag>
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="unsafe-math-optimizations" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="associative-math" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="reciprocal-math" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="finite-math-only" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="signed-zeros" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="trapping-math" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="rounding-math" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="signaling-nans" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="single-precision-constant" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="cx-limited-range" domain-type="boolean_no" group="unsafe" />
+
+  <!-- XXX UNSAFE -->
+  <flag type="gcc" name="cx-fortran-rules" domain-type="boolean_no" group="unsafe" />
+</flags>

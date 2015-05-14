@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="hosts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="host" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute name="hostname" type="xs:string" use="required" />
+						<xs:attribute name="user" type="xs:string" use="required" />
+						<xs:attribute name="port" type="xs:integer" use="optional" />
+						<xs:attribute name="slurm-host" type="xs:string" use="optional" />
+						<xs:attribute name="partition" type="xs:string" use="optional" />
+						<xs:attribute name="aliases" use="optional">
+							<xs:simpleType>
+								<xs:list itemType="xs:string"/>
+							</xs:simpleType>
+						</xs:attribute>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

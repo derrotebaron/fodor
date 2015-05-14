@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- based on GCC 4.9.1 -->
+<flags name="GCC ARM Optimizations">
+  <!-- XXX linking problems incoming -->
+  <flag type="gcc-machine" name="abi" domain-type="list" >
+    <list-element value="apcs-gnu"/>
+    <list-element value="atpcs"/>
+    <list-element value="aapcs"/>
+    <list-element value="aapcs-linux"/>
+    <list-element value="iwmmxt"/>
+  </flag>
+
+  <flag type="gcc-machine" name="thumb-interwork" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="sched-prolog" domain-type="boolean_no" />
+
+  <!-- XXX linking problems incoming -->
+  <flag type="gcc-machine" name="float-abi" domain-type="list" >
+    <list-element value="soft"/>
+    <list-element value="soft-fp"/>
+    <list-element value="hard"/>
+  </flag>
+
+  <!-- XXX -mlittle-endian and -mbig-endian should be a user decision -->
+
+  <!-- XXX -mwords-little-endian is deprecated -->
+
+  <!-- XXX -march should be a user decision -->
+
+  <flag type="gcc-machine" name="tune" domain-type="list" >
+    <list-element value="arm2"/>
+    <list-element value="arm250"/>
+    <list-element value="arm3"/>
+    <list-element value="arm6"/>
+    <list-element value="arm60"/>
+    <list-element value="arm600"/>
+    <list-element value="arm610"/>
+    <list-element value="arm620"/>
+    <list-element value="arm7"/>
+    <list-element value="arm7m"/>
+    <list-element value="arm7d"/>
+    <list-element value="arm7dm"/>
+    <list-element value="arm7di"/>
+    <list-element value="arm7dmi"/>
+    <list-element value="arm70"/>
+    <list-element value="arm700"/>
+    <list-element value="arm700i"/>
+    <list-element value="arm710"/>
+    <list-element value="arm710c"/>
+    <list-element value="arm7100"/>
+    <list-element value="arm720"/>
+    <list-element value="arm7500"/>
+    <list-element value="arm7500fe"/>
+    <list-element value="arm7tdmi"/>
+    <list-element value="arm7tdmi-s"/>
+    <list-element value="arm710t"/>
+    <list-element value="arm720t"/>
+    <list-element value="arm740t"/>
+    <list-element value="strongarm"/>
+    <list-element value="strongarm110"/>
+    <list-element value="strongarm1100"/>
+    <list-element value="strongarm1110"/>
+    <list-element value="arm8"/>
+    <list-element value="arm810"/>
+    <list-element value="arm9"/>
+    <list-element value="arm9e"/>
+    <list-element value="arm920"/>
+    <list-element value="arm920t"/>
+    <list-element value="arm922t"/>
+    <list-element value="arm946e-s"/>
+    <list-element value="arm966e-s"/>
+    <list-element value="arm968e-s"/>
+    <list-element value="arm926ej-s"/>
+    <list-element value="arm940t"/>
+    <list-element value="arm9tdmi"/>
+    <list-element value="arm10tdmi"/>
+    <list-element value="arm1020t"/>
+    <list-element value="arm1026ej-s"/>
+    <list-element value="arm10e"/>
+    <list-element value="arm1020e"/>
+    <list-element value="arm1022e"/>
+    <list-element value="arm1136j-s"/>
+    <list-element value="arm1136fj-s"/>
+    <list-element value="mpcore"/>
+    <list-element value="mpcorenovfp"/>
+    <list-element value="arm1156t2-s"/>
+    <list-element value="arm1156t2f-s"/>
+    <list-element value="arm1176jz-s"/>
+    <list-element value="arm1176jzf-s"/>
+    <list-element value="cortex-a5"/>
+    <list-element value="cortex-a7"/>
+    <list-element value="cortex-a8"/>
+    <list-element value="cortex-a9"/>
+    <list-element value="cortex-a12"/>
+    <list-element value="cortex-a15"/>
+    <list-element value="cortex-a53"/>
+    <list-element value="cortex-a57"/>
+    <list-element value="cortex-r4"/>
+    <list-element value="cortex-r4f"/>
+    <list-element value="cortex-r7"/>
+    <list-element value="cortex-m4"/>
+    <list-element value="cortex-m3"/>
+    <list-element value="cortex-m1"/>
+    <list-element value="cortex-m0"/>
+    <list-element value="cortex-m0plus"/>
+    <list-element value="marvell-pj4"/>
+    <list-element value="xscale"/>
+    <list-element value="iwmmxt"/>
+    <list-element value="iwmmxt2"/>
+    <list-element value="ep9312"/>
+    <list-element value="fa526"/>
+    <list-element value="fa626"/>
+    <list-element value="fa606te"/>
+    <list-element value="fa626te"/>
+    <list-element value="fmp626"/>
+    <list-element value="fa726te"/>
+    <list-element value="cortex-a15.cortex-a7"/>
+    <list-element value="cortex-a57.cortex-a53"/>
+  </flag>
+
+  <!-- XXX possible loss of precision -->
+  <flag type="gcc-machine" name="fpu" domain-type="list" >
+    <list-element value="vfp"/>
+    <list-element value="vfpv3"/>
+    <list-element value="vfpv3-fp16"/>
+    <list-element value="vfpv3-d16"/>
+    <list-element value="vfpv3-d16-fp16"/>
+    <list-element value="vfpv3xd"/>
+    <list-element value="vfpv3xd-fp16"/>
+    <list-element value="neon"/>
+    <list-element value="neon-fp16"/>
+    <list-element value="vfpv4"/>
+    <list-element value="vfpv4-d16"/>
+    <list-element value="fpv4-sp-d16"/>
+    <list-element value="neon-vfpv4"/>
+    <list-element value="fp-armv8"/>
+    <list-element value="neon-fp-armv8"/>
+    <list-element value="crypto-neon-fp-armv8"/>
+  </flag>
+
+  <flag type="gcc-machine" name="fp16-format" domain-type="list" >
+    <list-element value="none"/>
+    <list-element value="ieee"/>
+    <list-element value="alternative"/>
+  </flag>
+
+  <flag type="gcc-machine" name="structure-size-boundary" domain-type="list" >
+    <list-element value="8"/>
+    <list-element value="32"/>
+    <list-element value="64"/>
+  </flag>
+
+  <flag type="gcc-machine" name="mabort-on-noreturn" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="long-calls" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="single-pic-base" domain-type="boolean_no" />
+
+  <!-- FIXME -mpic-register missing -->
+
+  <flag type="gcc-machine" name="pic-data-is-text-relative" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="poke-function-name" domain-type="boolean_no" />
+
+   <!-- FIXME -mthumb and -marm exclude each other -->
+
+  <flag type="gcc-machine" name="tpcs-frame" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="tpcs-leaf-frame" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="callee-super-interworking" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="caller-super-interworking" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="tp" domain-type="list" >
+    <list-element value="soft"/>
+    <list-element value="cp15"/>
+    <list-element value="auto"/>
+  </flag>
+
+  <flag type="gcc-machine" name="tls-dialect" domain-type="list" >
+    <list-element value="gnu"/>
+    <list-element value="gnu2"/>
+  </flag>
+
+  <flag type="gcc-machine" name="word-relocations" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="fix-cortex-m3-ldrd" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="unaligned-access" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="neon-for-64bits" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="slow-flash-data" domain-type="boolean_no" />
+
+  <flag type="gcc-machine" name="restrict-it" domain-type="boolean_no" />
+</flags>

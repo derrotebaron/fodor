@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- based on GCC 4.9.1 -->
+<flags name="GCC Linux Optimizations">
+  <!-- XXX -mglibc -muclibc -mbionic are mutually exclusive -->
+  <!-- FIXME didn't bother copying the flags as glibc is the only
+       libc installed on most systems -->
+</flags>
