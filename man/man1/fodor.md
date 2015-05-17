@@ -4,7 +4,7 @@ FODOR 1 "MAY 2015" Linux "User Manuals"
 NAME
 ----
 
-FODOR - Flag Optimization using Discreet Optimization in Ruby
+FODOR - Flag Optimization using Discrete Optimization in Ruby
 
 SYNOPSIS
 --------
